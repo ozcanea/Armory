@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2974A341-692E-453F-BCB9-DB17F625155B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Armory</RootNamespace>
+    <AssemblyName>Armory</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Firearm.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICuttingThings.cs" />
+    <Compile Include="IFireMode.cs" />
+    <Compile Include="Knife.cs" />
+    <Compile Include="MachineGun.cs" />
+    <Compile Include="Mortar.cs" />
+    <Compile Include="Nuke.cs" />
+    <Compile Include="Pistol.cs" />
+    <Compile Include="RPG.cs" />
+    <Compile Include="ShotGun.cs" />
+    <Compile Include="UserControlKnifes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlKnifes.Designer.cs">
+      <DependentUpon>UserControlKnifes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlHeavyMachineGun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHeavyMachineGun.Designer.cs">
+      <DependentUpon>UserControlHeavyMachineGun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMortar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMortar.Designer.cs">
+      <DependentUpon>UserControlMortar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlNuke.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlNuke.Designer.cs">
+      <DependentUpon>UserControlNuke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPistol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPistol.Designer.cs">
+      <DependentUpon>UserControlPistol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlRPG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlRPG.Designer.cs">
+      <DependentUpon>UserControlRPG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlShotGun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlShotGun.Designer.cs">
+      <DependentUpon>UserControlShotGun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weapon.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlKnifes.resx">
+      <DependentUpon>UserControlKnifes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlHeavyMachineGun.resx">
+      <DependentUpon>UserControlHeavyMachineGun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMortar.resx">
+      <DependentUpon>UserControlMortar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlNuke.resx">
+      <DependentUpon>UserControlNuke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPistol.resx">
+      <DependentUpon>UserControlPistol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlRPG.resx">
+      <DependentUpon>UserControlRPG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlShotGun.resx">
+      <DependentUpon>UserControlShotGun.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sound\Death.wav" />
+    <Content Include="Sound\easteregg.wav" />
+    <Content Include="Sound\GunEmpty.wav" />
+    <Content Include="Sound\MachineGunFire.wav" />
+    <Content Include="Sound\MachineGunReload.wav" />
+    <Content Include="Sound\MachineGunReload2.wav" />
+    <Content Include="Sound\Mortar.wav" />
+    <Content Include="Sound\Pistol.wav" />
+    <Content Include="Sound\Pumpgun.wav" />
+    <Content Include="Sound\PumpGunReload.wav" />
+    <Content Include="Sound\Reloa2.wav" />
+    <Content Include="Sound\Reload1.wav" />
+    <Content Include="Sound\scream.wav" />
+    <Content Include="Sound\SharpenKnife.wav" />
+    <Content Include="Sound\StabKnife.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\mortar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\knife.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\thomas-the-nuke-engine-k-upscale-wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\pistol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\RPG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\ShotGun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\ammo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\M2_machine_gun.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
